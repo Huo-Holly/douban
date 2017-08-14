@@ -1,0 +1,15 @@
+<h1>电影详情</h1>
+
+<div class="detail_content">
+    <dl class="detail_dl">
+        <dt><img ng-src="{{res.images.large}}" width="300px" height="400px"></dt>
+        <dd>
+            <h4 ng-bind="res.title"></h4>
+            <p>类型:{{res.genres}}</p>
+            <p>导演: <span ng-repeat="dir in res.directors">{{dir.name}} </span></p>
+            <p>主演:<span ng-repeat="dir in res.casts">{{dir.name}} </span></p>
+
+        </dd>
+    </dl>
+</div>
+<div ng-bind="res.summary"></div>
